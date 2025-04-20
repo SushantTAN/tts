@@ -139,6 +139,27 @@ const App: React.FC = () => {
           {captions}
         </div>
       </div>
+
+      <div className='w-full'>
+        <h2>My Intro Video</h2>
+        <div className='relative w-full'>
+          <video
+            src="/videos/videoplayback.mp4"      // ← note the leading “/”
+            controls               // show play/pause/etc.
+            className="w-full rounded-lg shadow-lg"
+          >
+            Your browser doesn’t support the <code>&lt;video&gt;</code> tag.
+          </video>
+
+          {/* overlay container */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            {/* caption box */}
+            <div className="caption-font">
+              {captions}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
