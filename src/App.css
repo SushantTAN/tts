@@ -1,108 +1,18 @@
-/* Base reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* Page & container */
-body,
-html,
-#root {
-  height: 100%;
-}
-
-body {
-  background: #f0f4f8;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container {
-  background: #fff;
-  max-width: 600px;
-  width: 90%;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+.caption-font {
+  font-size: 32px;
+  font-weight: 900;
+  color: white;
   text-align: center;
-}
 
-/* Title */
-.title {
-  margin-bottom: 1rem;
-  color: #333;
-  font-size: 1.8rem;
-}
+  /* Outline */
+  -webkit-text-stroke: 2px black;
+  text-shadow:
+    0 0 2px black,
+    1px 1px 0 black,
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black;
 
-/* Textarea */
-.input-text {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 2px solid #dde3e8;
-  border-radius: 8px;
-  font-size: 1rem;
-  line-height: 1.5;
-  resize: vertical;
-  transition: border-color 0.2s;
-}
-
-.input-text:focus {
-  outline: none;
-  border-color: #667eea;
-}
-
-/* Voice select */
-.voice-select {
-  margin-top: 1rem;
-  width: 100%;
-  padding: 0.5rem 1rem;
-  border: 2px solid #dde3e8;
-  border-radius: 8px;
-  font-size: 1rem;
-  background: #fff;
-  transition: border-color 0.2s;
-}
-
-.voice-select:focus {
-  outline: none;
-  border-color: #667eea;
-}
-
-/* Button */
-.btn {
-  margin-top: 1rem;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  color: #fff;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.btn:not(:disabled):hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-}
-
-/* Captions box */
-.captions-container {
-  background: #1e293b;
-  color: #f1f5f9;
-  margin-top: 1.5rem;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  font-size: 1.25rem;
-  min-height: 3rem;
-  display: inline-block;
-  width: 100%;
+  /* Optional: better font */
+  font-family: 'Segoe UI', 'Arial Black', sans-serif;
 }
