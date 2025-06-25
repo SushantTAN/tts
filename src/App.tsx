@@ -9,6 +9,12 @@ const App: React.FC = () => {
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([])
   const [selectedVoiceIndex, setSelectedVoiceIndex] = useState(0)
 
+  const [videoSrc, setVideoSrc] = useState<string>(
+    'https://firebasestorage.googleapis.com/v0/b/fir-img-upload-903e0.appspot.com/o/videoplayback.mp4?alt=media&token=a5bd92a9-3d3b-4cd2-aa26-bd11096d57c4'
+  );
+
+  const [videoInput, setVideoInput] = useState<string>(() => videoSrc)
+
   const charIndicesRef = useRef<number[][]>([]) // stores char indices per paragraph
 
   useEffect(() => {
@@ -138,6 +144,22 @@ const App: React.FC = () => {
         <div className="mt-6 p-4 bg-gray-800 text-gray-100 rounded-lg text-lg min-h-[3rem] text-center">
           {captions}
         </div>
+      </div>
+
+      <div className="mb-4 flex flex-col sm:flex-row gap-2">
+        <input
+          type="text"
+          value={videoSrc}
+          onChange={e => setVideoInput(e.target.value)}
+          placeholder="Enter video URL..."
+          className="flex-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        />
+        <button
+          onClick={() => setVideoSrc(videoInput)}
+          className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition"
+        >
+          Save Video Source
+        </button>
       </div>
 
       <div className='w-full'>
