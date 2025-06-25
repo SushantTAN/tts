@@ -144,7 +144,7 @@ const App: React.FC = () => {
         <h2>My Intro Video</h2>
         <div className='relative w-full'>
           <video
-            src="/videos/videoplayback.mp4"      // ← note the leading “/”
+            src="https://firebasestorage.googleapis.com/v0/b/fir-img-upload-903e0.appspot.com/o/videoplayback.mp4?alt=media&token=a5bd92a9-3d3b-4cd2-aa26-bd11096d57c4"      // ← note the leading “/”
             controls               // show play/pause/etc.
             className="w-full rounded-lg shadow-lg"
           >
